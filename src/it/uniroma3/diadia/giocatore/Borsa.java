@@ -1,6 +1,6 @@
 package it.uniroma3.diadia.giocatore;
 
-import it.uniroma3.diadia.IOConsole;
+import it.uniroma3.diadia.IO;
 import it.uniroma3.diadia.attrezzi.Attrezzo;
 
 public class Borsa {
@@ -8,13 +8,13 @@ public class Borsa {
 	private Attrezzo[] attrezzi;
 	private int numeroAttrezzi;
 	private int pesoMax;
-	private IOConsole io;
+	private IO io;
 
-	public Borsa(IOConsole io) {
+	public Borsa(IO io) {
 		this(DEFAULT_PESO_MAX_BORSA, io);
 	}
 
-	public Borsa(int pesoMax, IOConsole io) {
+	public Borsa(int pesoMax, IO io) {
 		this.pesoMax = pesoMax;
 		this.io=io;
 		this.attrezzi = new Attrezzo[10]; // speriamo bastino...

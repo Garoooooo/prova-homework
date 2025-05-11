@@ -1,6 +1,6 @@
 package it.uniroma3.diadia.ambienti;
 
-import it.uniroma3.diadia.IOConsole;
+import it.uniroma3.diadia.IO;
 import it.uniroma3.diadia.attrezzi.Attrezzo;
 
 public class Labirinto {
@@ -8,13 +8,13 @@ public class Labirinto {
 	private Stanza stanzaCorrente;
 	private Stanza stanzaVincente;
 	private Stanza stanzainiziale;
-    private IOConsole io;
+    private IO io;
 	
 	  /**
      * Crea tutte le stanze e le porte di collegamento
      */
 	
-	public Labirinto(IOConsole io) {
+	public Labirinto(IO io) {
 		this.io=io;
 		creaStanze();
 	}

@@ -11,10 +11,10 @@ public class Partita {
     private boolean finita;
     private Labirinto labirinto;
     private Giocatore giocatore;
-	private IOConsole io;
+	private IO io;
 
     
-    public Partita(IOConsole io) {
+    public Partita(IO io) {
     	this.io=io;
         this.labirinto = new Labirinto(io);
         this.giocatore = new Giocatore(io);
@@ -56,6 +56,10 @@ public class Partita {
         this.finita = true;
     }
 
+    public boolean giocatoreIsVivo() {
+        return this.giocatore.getCfu() > 0;
+    }
+    
     public int getCfu() {
         return this.giocatore.getCfu();
     }

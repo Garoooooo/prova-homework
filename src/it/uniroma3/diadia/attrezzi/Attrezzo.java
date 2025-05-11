@@ -1,6 +1,6 @@
 package it.uniroma3.diadia.attrezzi;
 
-import it.uniroma3.diadia.IOConsole;
+import it.uniroma3.diadia.IO;
 import it.uniroma3.diadia.ambienti.Stanza;
 
 /**
@@ -15,7 +15,7 @@ public class Attrezzo {
 
 	private String nome;
 	private int peso;
-	private IOConsole io;
+	private IO io;
 
 	/**
 	 * Crea un attrezzo
@@ -23,7 +23,7 @@ public class Attrezzo {
 	 * @param nome il nome che identifica l'attrezzo
 	 * @param peso il peso dell'attrezzo
 	 */
-	public Attrezzo(String nome, int peso, IOConsole io) {
+	public Attrezzo(String nome, int peso, IO io) {
 		this.io=io;
 		this.peso = peso;
 		this.nome = nome;
@@ -46,6 +46,20 @@ public class Attrezzo {
 	public int getPeso() {
 		return this.peso;
 	}
+	
+	/*
+	    attrezzo.setNome(new StringBuilder(attrezzo.getNome()).reverse().toString());
+		attrezzo.setPeso(attrezzo.getPeso()*2);
+		*/
+	
+	public void setNome(String a) {
+		this.nome=a;
+	}
+	
+	public void setPeso(int a) {
+		this.peso=a;
+	}
+	
 
 	/**
 	 * Restituisce una rappresentazione stringa di questo attrezzo
